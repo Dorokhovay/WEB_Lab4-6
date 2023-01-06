@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ЛР4-6</title>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+  <header>
+    <h1 class="header-PIB">ТР-12 Дорохова Єлизавета Владиславівна</h1>
+    <p class="header-task">Блочна модель і позиціонування.</p>
+  </header>
+  <main class="background-img">
+    <div class="container">
+      <form class="form">
+        <div class="user-data">
+          <label class="form-field ording">
+            <span class="form-label">Ім'я</span>
+            <input type="text" class="input-name input-opc" name="name" id="name" />
+          </label>
+          <label class="form-field">
+            <span class="form-label">Група</span>
+            <input type="text" class="input-group input-opc" name="group" id="group" />
+          </label>
+        </div>
+        <div class="radio-buttons">
+          <p class="radio-task">У якому типі блокової моделі властивості width і height задають фінальний розмір
+            елемента і включають
+            значення полів (padding) і меж (border), але не
+            відступів (margin)?</p>
+          <label>
+            <input type="radio" name="box-type" value="content-box" checked class="input-radio input-opc" />
+            Content-box
+          </label>
+          <label>
+            <input type="radio" name="box-type" value="border-box" class="input-radio input-opc" />
+            Border-box
+          </label>
+          <p class="radio-task">Для чого потрібні структурні псевдокласи?</p>
+          <label>
+            <input type="radio" name="pseudo-class" value="neighborhood" checked class="input-radio input-opc" />
+            Щоб вибрати певні елементи з колекції дочірніх елементів (сусідів).
+          </label>
+          <label>
+            <input type="radio" name="pseudo-class" value="to-create" class="input-radio input-opc" />
+            Щоб створити псевдоелемент.
+          </label>
+        </div>
+        <div class="checkboxes">
+          <p class="checkboxes-task">У наступних завданнях оберіть дві правильні відповіді. Які є існуючі псевдокласи?
+          </p>
+          <span>Перше завдання:</span>
+          <label>
+            <input type="checkbox" name="pseudo-class" value="first-child" class="input-checkbox input-opc" />
+            :first-child
+          </label>
+          <label>
+            <input type="checkbox" name="pseudo-class" value="last-child" class="input-checkbox input-opc" />
+            :last-child
+          </label>
+          <label>
+            <input type="checkbox" name="pseudo-class" value="middle-child" class="input-checkbox input-opc" />
+            :middle-child
+          </label>
+          <span class="checkbox-down">Друге завдання:</span>
+          <label>
+            <input type="checkbox" name="pseudo-class2" value="not" class="input-checkbox input-opc" />
+            :not(selector)
+          </label>
+          <label>
+            <input type="checkbox" name="pseudo-class2" value="second-child" class="input-checkbox input-opc" />
+            :second-child
+          </label>
+          <label>
+            <input type="checkbox" name="pseudo-class2" value="nth-child" class="input-checkbox input-opc" />
+            :nth-child(an+b)
+          </label>
+        </div>
+        <div class="numbers-questions">
+          <div><label>
+              Скільки сторін є у елементів?:
+              <input type="number" name="sides" min="0" max="8" step="1" value="0" class="input-number input-opc" />
+            </label></div>
+
+          <div>
+            <label>
+              Є два div, які знаходяться один на одному. У першого z-index 2. Який найменший z-index зробить другий div
+              поверх першого?
+              <input type="number" name="height" min="0" max="5" step="1" value="0" class="input-number input-opc" />
+            </label>
+          </div>
+        </div>
+        <div class="selects">
+          <p class="selects-task">Оберіть існуючі значення властивості position з представлених.</p>
+          <label for="relative"></label>
+          <select id="relative" name="relative" class="upper select-quiz input-opc">
+            <option value="change" selected>change</option>
+            <option value="relative">relative</option>
+            <option value="strong">strong</option>
+            <option value="up">up</option>
+          </select>
+          <label for="static"></label>
+          <select id="static" name="static" class="select-quiz input-opc">
+            <option value="static" selected>static</option>
+            <option value="down">down</option>
+            <option value="left">left</option>
+            <option value="right">right</option>
+          </select>
+        </div>
+        <div class="datalists">
+          <p>Введіть існуюче значення властивості position з представлених.</p>
+          <label for="position-value"></label>
+          <input list="position-values" name="position-value" id="position-value"
+            class="upper input-datalist input-opc" />
+          <datalist id="position-values">
+            <option>higher</option>
+            <option>lower</option>
+            <option>absolute</option>
+          </datalist>
+          <label for="position-value2"></label>
+          <input list="position-values2" name="position-value" id="position-value2" class="input-datalist input-opc" />
+          <datalist id="position-values2">
+            <option>under</option>
+            <option>ontop</option>
+            <option>fixed</option>
+          </datalist>
+        </div>
+        <button type="submit" class="form-button" data-modal-open>Відправити</button>
+      </form>
+    </div>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="button-close" data-modal-close>
+          <svg width="11px" height="11px" class="close-icon">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+        <p class="modal-text"></p>
+      </div>
+    </div>
+  </main>
+
+<script src="./js/mailer.js" type="module"></script>
+<script src="./js/modal.js" type="module"></script>
+<script src="./js/lab.js" type="module"></script>
+</body>
+</html>
